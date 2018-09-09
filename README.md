@@ -19,12 +19,17 @@ We provide both unit-level features for [TAG](https://github.com/yjxiong/action-
 
 > Note: validation set is used for training, as the training set for THUMOS-14 does not contain untrimmed videos.
 
-For unit-level features (unit length = 16), the appearance features can be downloaded at here: [val set](https://drive.google.com/file/d/180YUoPvyaF2Z_T9KMKINLdDQCZEg60Jb/view?usp=sharing), [test set](https://drive.google.com/file/d/1x9Q78AZiAGqx4XB2zO3SEKp1htsATlnU/view?usp=sharing); the denseflow features can be downloaded here: [val set](https://drive.google.com/file/d/1-6dmY_Uy-H19HxvfK_wUFQCYHmlPzwFx/view?usp=sharing), [test set](https://drive.google.com/file/d/1Qm9lIJQFm5s6hDSB_2k1tj8q2tnabflJ/view?usp=sharing)
+Unit-level features (unit length = 16) downloading links are provided in the table below. 
 
-For unit-level features (unit length = 6), the appearance and denseflow features for validation and test sets are available in [google drive](http://www.google.com).
+|            | Appearance | Denseflow |
+|:----------:|:----------:|:---------:|
+| Validation | [link](https://drive.google.com/file/d/180YUoPvyaF2Z_T9KMKINLdDQCZEg60Jb/view?usp=sharing) | [link](https://drive.google.com/file/d/1-6dmY_Uy-H19HxvfK_wUFQCYHmlPzwFx/view?usp=sharing) |
+| Test | [link](https://drive.google.com/file/d/1x9Q78AZiAGqx4XB2zO3SEKp1htsATlnU/view?usp=sharing) | [link](https://drive.google.com/file/d/1Qm9lIJQFm5s6hDSB_2k1tj8q2tnabflJ/view?usp=sharing)|
+
+For Unit-level features (unit length = 6), the appearance and denseflow features for validation and test sets are available in [google drive](http://www.google.com).
 
 ## Running TAR
-Download the unit level featurs, and edit the feature path in `TAR/main.py`, and then just run  `python main.py`
+Download the unit level featurs, and edit the feature path in `TAR/main.py`, and then just run  `python main.py`. The `post_processing.py` in `TAR/test_results` folder should be applied on the output test result file. After post processing, the pkl file can be evaluated by the eval program, which can be found in [here](https://github.com/jiyanggao/TURN-TAP/tree/master/eval).
 
 ## Reference
 
