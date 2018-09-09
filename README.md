@@ -24,6 +24,7 @@ For unit-level features (unit length = 16), the appearance features can be downl
 For unit-level features (unit length = 6), the appearance and denseflow features for validation and test sets are available in [google drive](http://www.google.com).
 
 ## Running TAR
+Download the unit level featurs, and edit the feature path in `TAR/main.py`, and then just run  `python main.py`
 
 ## Reference
 
