@@ -8,7 +8,7 @@ The framework of CTAP is shown in the figure below:
   <img src='img/framework.png' width='900'/>
 </p>
 
-This repository mainly consists of two parts: 
+This repository consists of three parts: 
 
 * code for Temporal convolutional Adjustment and Ranking (TAR) network which uses temporal conv layers to aggregate the unit-level features ( in the folder `TAR`)
 * code for Proposal-level Actionness Trustworthiness Estimator (PATE) classifier ( in the folder `PATE`)
