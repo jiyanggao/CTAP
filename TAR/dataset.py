@@ -15,7 +15,8 @@ def calculate_IoU(i0,i1):
 A class that handles the training set
 '''
 class TrainingDataSet(object):
-    def __init__(self,flow_feat_dir,appr_feat_dir,clip_gt_path,background_path,batch_size,movie_length_info,ctx_num,central_num, unit_feature_size,unit_size):
+    def __init__(self,flow_feat_dir,appr_feat_dir,clip_gt_path,background_path,batch_size,movie_length_info,ctx_num,central_num, unit_feature_size,unit_size,
+        pos_neg_ratio=10.0):
         #it_path: image_token_file path
         self.ctx_num=ctx_num
         self.unit_feature_size=unit_feature_size
@@ -28,6 +29,12 @@ class TrainingDataSet(object):
         self.training_samples=[]
         self.central_num=central_num
         print "Reading training data list from "+clip_gt_path+" and "+background_path
+        db_size = 0
+        with open(clip_gt_path) as f:
+            db_size += len(f.readlines())
+        with open(background_path) as f:
+            db_size += len(f.readlines())
+
         with open(clip_gt_path) as f:
             for l in f:
                 movie_name=l.rstrip().split(" ")[0]
@@ -43,7 +50,7 @@ class TrainingDataSet(object):
         with open(background_path) as f:
             for l in f:
                 # control the ratio between  background samples and positive samples to be 10:1
-                if random.random()>10.0*positive_num/287084: continue
+                if random.random()>pos_neg_ratio*positive_num/db_size: continue
                 movie_name=l.rstrip().split(" ")[0]
                 clip_start=float(l.rstrip().split(" ")[1])
                 clip_end=float(l.rstrip().split(" ")[2])
