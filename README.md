@@ -35,7 +35,7 @@ Currently there are three sets of action proposals for testing with different pu
 |----------------------|:---------------:|:--------------------------:|:-----------------------------:|
 | Evaluated proposals  | sliding windows with unit length of 16 |  TAG proposals | sliding windows with unit length of 6 |
 
-When line 185 is `test_swin.txt`, line 181-184 contents do not need modification. When line 185 becomes `tag_proposals_round6.txt` or `test_swin_unit6_sample4.txt`, please modify line 181-184 as the feature folders downloaded and unzipped from the link of unit-level features (unit length = 6) provided on the above.
+When line 185 is `test_swin.txt`, line 181-184 contents do not need modification. When line 185 becomes `tag_proposals_round6.txt` or `test_swin_unit6_sample4.txt`, please modify line 181-184 as the feature folders downloaded and unzipped from the link of unit-level features (unit length = 6) provided on the above. Besides, modify line 14 as `unit_size=6.0`.
 
 ## Reference
 
